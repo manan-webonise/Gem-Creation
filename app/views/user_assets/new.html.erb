@@ -1,0 +1,9 @@
+<h3>Add Asset</h3>
+<%= form_with model: @user_asset do |form| %>
+  <p>Name: <%= form.text_field :name %></p>
+  <p>Description: <%= form.text_field :description %></p>
+  <p>Storage: <%= form.number_field :storage %></p>
+
+  <p>User: <%= form.select :user_id, User.all.map { |user| [ user.to_s, user.id ] } %></p>
+  <%= form.submit %>
+<% end %>

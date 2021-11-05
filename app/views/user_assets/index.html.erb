@@ -1,0 +1,8 @@
+<h1>List of Assets</h1>
+<ul><% @user_assets.each do |proasset| %>
+  <li>
+    <%= link_to proasset.name, proasset_path(proasset) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Asset', new_user_asset_path %></div>

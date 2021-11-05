@@ -1,0 +1,9 @@
+<h1><%= @user_asset.name %></h1>
+<%= link_to 'Edit', edit_proasset_path(@user_asset) %>
+<p><b>Description:</b> <%= @user_asset.description %></p>
+<p><b>Storage:</b> <%= @user_asset.storage %></p>
+
+<h2>Name of User : <%= link_to @user_asset.user.to_s, user_path(@user_asset.user) %></h2>
+
+<p><%= link_to 'Delete', @user_asset, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
+<p><%= link_to 'Go back to all assets', user_asset_path %></p>
